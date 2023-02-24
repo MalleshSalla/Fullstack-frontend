@@ -22,6 +22,7 @@ export class CreateEmployeeComponent implements OnInit {
       next:(data)=>{
         console.log(data)
         this.gotoEmployeeList();
+       
       },
       error:(err)=>{
         console.log(err)
@@ -30,7 +31,8 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   gotoEmployeeList(){
-    this.router.navigate(['/employee']);
+    this.router.navigate(['/employees']);
+    alert(this.employee.firstName+" is created")
   }
 
   onSubmit(){
